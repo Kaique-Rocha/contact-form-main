@@ -1,0 +1,236 @@
+* {
+    font-family: "Work Sans", sans-serif;
+    font-style: normal;
+    color: hsl(292, 42%, 14%);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 500px;
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background-color: hsl(148, 38%, 91%);
+    align-items: center;
+    padding-top: 30px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 30px;
+    text-align: left;
+    margin: 20px 3% 15px 3%;
+}
+
+.main-container {
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 700px;
+}
+
+input {
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid hsl(186, 15%, 59%);
+}
+
+input:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+input:focus {
+    outline: none; 
+    border: 1px solid hsl(187, 24%, 22%); 
+}
+
+label {
+    font-size: 16px;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 3% 15px 3%;
+    width: 94%;
+}
+
+.fname, .lname {
+    font-size: 16px;
+    width: 50%;
+}
+
+.fname > input, .lname > input {
+    width: 96%;
+    height: 30px;
+}
+
+.email {
+    font-size: 16px;
+    width: 94%;
+    margin: 15px 3% 15px 3%;
+}
+
+.email > input {
+    width: 98%;
+    height: 30px;
+}
+
+.queryt {
+    display: flex;
+    justify-content: left;
+    margin: 15px 3% 15px 3%;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.query_type {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.general, .suport {
+    display: flex;
+    font-size: 16px;
+    width: 45%;
+    height: 30px;
+    border: 1px solid hsl(186, 15%, 59%);
+    justify-content: center;
+    margin-right: 15px;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.general:hover, .suport:hover {
+    border: 1px solid hsl(169, 82%, 27%);
+}
+
+div.general:has(input[type="radio"]:checked),
+div.suport:has(input[type="radio"]:checked) {
+    border: 1px solid hsl(169, 82%, 27%);
+    background-color: hsla(169, 82%, 27%, 0.2);
+    color: hsl(0, 0%, 100%);
+}
+
+.general > input, .suport > input {
+    margin-right: 10px;
+}
+
+.message {
+    width: 94%;
+    margin: 15px 3% 15px 3%;
+}
+
+.message textarea {
+    margin-top: 15px;
+    width: 98%;
+    height: 80px;
+    overflow: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap; 
+    text-align: justify;
+    padding: 15px;
+    border: 1px solid hsl(169, 82%, 27%);
+    outline: none;
+    resize: none;
+    border-radius: 7px;
+}
+
+.message textarea:focus {
+    border: 1px solid hsl(187, 24%, 22%); 
+    background-color: hsla(169, 82%, 27%, 0.2);
+}
+
+.terms {
+    width: 94%;
+    margin: 30px 3% 15px 3%;
+}
+
+.terms > label {
+    margin-left: 10px;
+}
+
+.terms > label:hover {
+    cursor: pointer;
+}
+
+.btn > input {
+    width: 92%;
+    margin: 30px 3% 15px 3%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: none;
+    border: none;
+    font-size: 16px;
+}
+
+.btn > input:hover {
+    background-color: hsl(187, 24%, 22%); 
+}
+
+.error-message {
+    color: hsl(0, 70%, 50%);
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+
+.alert {
+    position:fixed;
+    top: 14%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(187, 24%, 22%);
+    border: 2px solid hsl(187, 24%, 22%);
+    border-radius: 8px;
+    z-index: 1000; /* Para garantir que o alerta esteja sobre outros conteúdos */
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .alert.hidden {
+    display: none;
+  }
+  
+  .alert-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #alert-message {
+    color: hsl(0, 0%, 100%);
+    margin-bottom: 20px;
+  }
+  
+  #alert-message strong {
+    color: hsl(0, 0%, 100%);
+  }
+
+  #alert-ok-button {
+    background-color: hsl(169, 82%, 27%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  #alert-ok-button:hover {
+    background-color: hsl(186, 15%, 59%);
+  }
+  
+  

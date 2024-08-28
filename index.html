@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      display: none; /* Esconde as mensagens de erro inicialmente */
+    }
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  
+  <section class="main-container">
+    <div class="title-container">
+      <h1>Contact Us</h1>
+    </div>
+
+    <form id="contact-form">
+      <div class="name">
+        <div class="fname">
+          <label for="fname">First Name *</label> <br>
+          <input type="text" id="fname" required>
+          <span id="fname-error" class="error-message">This field is required</span>
+        </div>
+        <div class="lname">
+          <label for="lname">Last Name *</label> <br>
+          <input type="text" id="lname" required>
+          <span id="lname-error" class="error-message">This field is required</span>
+        </div>
+      </div>
+    
+      <div class="email">
+        <label for="email">Email Address *</label> <br>
+        <input type="email" id="email" required>
+        <span id="email-error" class="error-message">This field is required</span>
+      </div>
+    
+      <div class="queryt">
+        <label class="query_type">Query Type *</label>
+        <div class="general check">
+          <input type="radio" id="general" name="query" value="general" required>
+          <label for="general">General Enquiry</label>
+        </div>
+        <div class="suport check">
+          <input type="radio" id="suport" name="query" value="suport" required>
+          <label for="suport">Support Request</label>
+        </div>
+      </div>
+    
+      <div class="message">
+        <label for="message">Message *</label> <br>
+        <textarea name="message" id="message" required></textarea>
+        <span id="message-error" class="error-message">This field is required</span>
+      </div>
+    
+      <div class="terms">
+        <input type="checkbox" name="terms" id="terms" required>
+        <label for="terms">I consent to being contacted by the team *</label>
+        <span id="terms-error" class="error-message">You must agree before submitting.</span>
+      </div>
+    
+      <div class="btn">
+        <input type="submit" name="btn-submit" id="btn-submit" value="Submit" disabled>
+      </div>
+    </form>
+
+    <div id="custom-alert" class="alert hidden">
+      <div class="alert-content">
+        <p id="alert-message"><img src="./assets/images/icon-success-check.svg"><bold>Message Sent!</bold><br>
+        Thanks for completing the form. We'll be in touch soon!</p>
+        
+        <button id="alert-ok-button">OK</button>
+      </div>
+    </div>
+    
+
+  </section>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
